@@ -16,13 +16,21 @@ main {
 }
 ```
 Note:
-definition `flex-grow: 1` causes `<main/>` fill the all available space
+definition `flex-grow: 1` causes `<main/>` fills the all available space
 
 HTML:
 
 ```html
-<header>header</header>
-<main>content</main>
-<footer>footer</footer>
+<!doctype html>
+<html><!-- 100% height -->
+    <head>
+        <!-- ... -->
+    </head>
+    <body><!-- flex container / 100% height -->
+        <header>header</header><!-- flex item -->
+        <main>content</main><!-- flex item / fills the all available space -->
+        <footer>footer</footer><!-- flex item -->
+    <body>
+</html>
 ```
 Live preview: https://jsfiddle.net/cichy380/sm9pdyhw/
