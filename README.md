@@ -1,25 +1,26 @@
 # Sticky footer
 Pin a flexible-height footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS.
 
-CSS:
+#### CSS
 ```css
-html {
+html, body {
     height: 100%;
 }
 body {
-    height: 100%;
     display: flex;
     flex-direction: column;
 }
 main {
-    flex: 1 1 auto;
+    flex: 1 0 auto;
+}
+footer {
+  flex-shrink: 0;
 }
 ```
 Note:
-definition `flex-grow: 1` causes `<main/>` fills the all available space
+declaration `flex-grow: 1` causes the element `<main/>` we want to grow to fill the all available space
 
-HTML:
-
+#### HTML
 ```html
 <!doctype html>
 <html><!-- 100% height -->
